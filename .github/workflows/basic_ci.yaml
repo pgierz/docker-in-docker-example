@@ -1,0 +1,11 @@
+name: Run Docker in Docker
+on:
+  push:
+jobs:
+  test:
+    runs-on: dind-latest
+  steps:
+    - name: Check Docker
+      run: |
+        which -a docker
+        docker run --it alpine:latest 'echo hello from $hosname'
