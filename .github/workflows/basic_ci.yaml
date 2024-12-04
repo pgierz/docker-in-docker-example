@@ -1,6 +1,7 @@
 name: Run Docker in Docker
 on:
   push:
+    branches: ["main"]
 jobs:
   test:
     runs-on: dind-latest
